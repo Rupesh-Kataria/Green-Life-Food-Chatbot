@@ -115,15 +115,15 @@ GreenLife Foods Chatbot is an AI-powered solution designed to assist distributor
 
 ## Prompt Engineering
 The chatbot uses carefully crafted prompts to:
-1. I have say to remove the quantity unit of the product always give output in json
-2. Ask it to handle like always return the intent mention in the prompt like if some user give cost then you should return intent get_price not give cost because we do not have give cost function although there meaning is same.
-3. Also you return different intent
+1. Always remove the quantity unit from the product and return the output in JSON format.
+2. Ensure that the correct intent is returned as specified in the prompt. For example, if a user asks for the cost, the chatbot should return the get_price intent, not the give_cost intent, since the give_cost function does not exist, even though the meanings are similar.
+3. Ensure that different intents are correctly returned based on user input
 
 
 
 ### Limitations
-- Like there is problem in setting fuzzy ratio setting to low can lead to addition of the word which are not even related and adding adding can lead to ignorance of the item which i ordered like if i ordered wheat then organic_wheat is the name in our product list so setting high fuzz ratio wheat is not available.
-- Sometime it give wrong output when you ask general question when you ask about the quantity. This may be due to context increasing. So we can improve it by my improving prompt
+- Setting a low fuzzy matching ratio can result in the inclusion of unrelated words, while a high fuzzy ratio can cause relevant items to be overlooked. For example, if I search for "wheat," a high fuzzy ratio might not show "organic_wheat" from the product list, even though it's the correct match.
+- Additionally, the system can give incorrect outputs when asked about specific details like quantity, likely due to increased context influencing the response. To improve the system's accuracy, enhancing the prompt could help address these issues.
 
 ---
 
